@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive клиент для Minecraft 1.21.4</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="animated-bg"></div>
+    <div class="particles"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-shield-alt"></i> Exclusive</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Возможности</a>
+                <a href="#stats" class="nav-link">Статистика</a>
+                <a href="#screenshots" class="nav-link">Скриншоты</a>
+                
+                <!-- Кнопка возврата в личный кабинет для авторизованных пользователей -->
+                <div id="returnToDashboard" style="display: none;">
+                    <button class="btn-login" onclick="returnToDashboard()" style="margin-right: 15px;">
+                        <i class="fas fa-user"></i> Личный кабинет
+                    </button>
+                </div>
+                
+                <div class="auth-buttons" id="authButtonsContainer">
+                    <button class="btn-login" onclick="openAuthModal('login')">
+                        <i class="fas fa-sign-in-alt"></i> Войти
+                    </button>
+                    <button class="btn-register" onclick="openAuthModal('register')">
+                        <i class="fas fa-user-plus"></i> Регистрация
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content centered">
+            <h1 class="hero-title">Exclusive</h1>
+            <p class="hero-subtitle">Премиальный клиент для Minecraft 1.21.4 Fabric</p>
+            <p class="hero-description">Не просто играйте в игру. Изменяйте её правила, преодолевайте ограничения и переосмысливайте игровой процесс с современными визуальными модификациями и оптимизацией.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openAuthModal('register')">
+                    <i class="fas fa-rocket"></i> Начать использовать
+                </button>
+                <button class="btn-secondary" onclick="openAuthModal('login')">
+                    <i class="fas fa-sign-in-alt"></i> Войти в систему
+                </button>
+            </div>
+            
+            <!-- Статистика -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">102</div>
+                    <div>Активных пользователей</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15,998</div>
+                    <div>Загрузок в августе</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">271</div>
+                    <div>Обновлений</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div>Года развития</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Визуальные улучшения</h3>
+                    <p>Кастомные шейдеры, улучшенное освещение, продвинутые текстуры и эффекты частиц</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Максимальная оптимизация</h3>
+                    <p>Увеличение FPS на 40%, снижение задержек и полная стабильность игры</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Fabric 1.21.4</h3>
+                    <p>Полная совместимость с последней версией Fabric и популярными модами</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Абсолютная безопасность</h3>
+                    <p>Защита от обнаружения и обход анти-чит систем без риска блокировки</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Умные функции</h3>
+                    <p>Автоматическая настройка, умный поиск ресурсов и адаптивный интерфейс</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Постоянные обновления</h3>
+                    <p>Регулярные обновления с новыми функциями и исправлениями</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают Exclusive?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Высокая производительность</h3>
+                    <p>Оптимизированный код обеспечивает плавный геймплей даже на слабых ПК</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Премиум качество</h3>
+                    <p>Профессиональная разработка и постоянная техническая поддержка</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Конфиденциальность</h3>
+                    <p>Ваши данные защищены, никакой слежки и сбора информации</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Скриншоты</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-image"></i></div>
+                    <h3>Интерфейс клиента</h3>
+                    <p>Современный и интуитивно понятный интерфейс с настройками в один клик</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Игровой процесс</h3>
+                    <p>Улучшенная графика и плавность без потери производительности</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Настройки</h3>
+                    <p>Гибкая система настроек под любой стиль игры и предпочтения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">Вход</button>
+                <button class="tab-btn" onclick="switchTab('register')">Регистрация</button>
+            </div>
+            
+            <form id="loginForm" class="auth-form active">
+                <h3>Вход в аккаунт</h3>
+                <input type="text" placeholder="Логин" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-sign-in-alt"></i> Войти в систему
+                </button>
+            </form>
+            
+            <form id="registerForm" class="auth-form">
+                <h3>Создать аккаунт</h3>
+                <input type="text" placeholder="Логин" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-user-plus"></i> Зарегистрироваться
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-shield-alt"></i> Exclusive</h3>
+                    <p>Премиум визуал клиент для Minecraft</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Возможности</a>
+                    <a href="#stats">Статистика</a>
+                    <a href="#screenshots">Скриншоты</a>
+                    <a href="mailto:support@sam1xdev">Поддержка</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Exclusive Client. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Функция проверки авторизации и обновления навигации
+        function checkAuthAndUpdateNav() {
+            const savedUser = localStorage.getItem('currentUser');
+            const returnToDashboard = document.getElementById('returnToDashboard');
+            const authButtons = document.getElementById('authButtonsContainer');
+            const heroButtons = document.querySelector('.hero-buttons');
+            
+            if (savedUser) {
+                try {
+                    const user = JSON.parse(savedUser);
+                    // Показываем кнопку возврата в личный кабинет
+                    returnToDashboard.style.display = 'block';
+                    authButtons.style.display = 'none';
+                    
+                    // Обновляем кнопки в hero секции
+                    if (heroButtons) {
+                        heroButtons.innerHTML = `
+                            <button class="btn-primary" onclick="returnToDashboard()">
+                                <i class="fas fa-user"></i> Личный кабинет
+                            </button>
+                            <button class="btn-secondary" onclick="logout()">
+                                <i class="fas fa-sign-out-alt"></i> Выйти
+                            </button>
+                        `;
+                    }
+                } catch (e) {
+                    console.error('Error parsing user:', e);
+                    returnToDashboard.style.display = 'none';
+                    authButtons.style.display = 'flex';
+                }
+            } else {
+                returnToDashboard.style.display = 'none';
+                authButtons.style.display = 'flex';
+            }
+        }
+
+        // Функция возврата в личный кабинет
+        function returnToDashboard() {
+            const savedUser = localStorage.getItem('currentUser');
+            if (savedUser) {
+                try {
+                    const user = JSON.parse(savedUser);
+                    if (user.role === 'admin') {
+                        window.location.href = 'admin.html';
+                    } else {
+                        window.location.href = 'dashboard.html';
+                    }
+                } catch (e) {
+                    console.error('Error parsing user:', e);
+                    window.location.href = 'dashboard.html';
+                }
+            }
+        }
+
+        // Функция выхода
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        }
+
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Анимация появления элементов при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Наблюдаем за карточками и секциями
+        document.addEventListener('DOMContentLoaded', function() {
+            // Проверяем авторизацию при загрузке
+            checkAuthAndUpdateNav();
+            
+            const cards = document.querySelectorAll('.feature-card, .stat-card, .dashboard-card, .admin-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(50px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+
+            // Запускаем анимацию для видимых элементов
+            setTimeout(() => {
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }
+                });
+            }, 100);
+        });
+
+        // Параллакс эффект для фона
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const particles = document.querySelector('.particles');
+            const animatedBg = document.querySelector('.animated-bg');
+            
+            if (particles) {
+                particles.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+            if (animatedBg) {
+                animatedBg.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Анимация ввода для статистики
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Запуск анимации счетчиков при появлении в viewport
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target.querySelector('.stat-number');
+                    if (counter && !counter.classList.contains('animated')) {
+                        counter.classList.add('animated');
+                        const target = parseInt(counter.textContent.replace(/,/g, ''));
+                        animateCounter(counter, target);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Наблюдаем за статистикой
+        document.querySelectorAll('.stat-card').forEach(card => {
+            counterObserver.observe(card);
+        });
+    </script>
+</body>
+</html>

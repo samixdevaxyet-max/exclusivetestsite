@@ -1,0 +1,37 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@exclusive.ru",
+            "password": "admin123",
+            "role": "admin",
+            "subscription": "Forever",
+            "registrationDate": "28.02.2023",
+            "hwid": null
+        },
+        {
+            "id": 2,
+            "username": "samixzxc",
+            "email": "samixzxc@mail.ru",
+            "password": "12345",
+            "role": "user",
+            "subscription": "Reborn",
+            "registrationDate": "28.02.2023",
+            "hwid": null
+        },
+        {
+            "id": 3,
+            "uid": 1,
+            "username": "12345",
+            "email": "samixdef@mail.ru",
+            "password": "12345",
+            "role": "user",
+            "subscription": "None",
+            "registrationDate": "10.11.2025",
+            "hwid": null
+        }
+    ],
+    "licenses": [],
+    "last_uid": 1
+}

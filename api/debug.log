@@ -1,0 +1,28 @@
+2025-11-10 21:09:09 - Action: get_active, Input: null
+2025-11-10 21:09:09 - Total users: 0, Total licenses: 20
+2025-11-10 21:09:12 - Action: generate, Input: {"type":"1 Month","amount":1,"createdBy":"admin"}
+2025-11-10 21:09:12 - Total users: 0, Total licenses: 20
+2025-11-10 21:09:12 - Generated 1 keys of type: 1 Month
+2025-11-10 21:09:12 - Action: get_active, Input: null
+2025-11-10 21:09:12 - Total users: 0, Total licenses: 21
+2025-11-10 21:09:36 - Action: activate, Input: {"key":"4VIY6-ZA6VK-HLF5B-N3AYA","username":"12345"}
+2025-11-10 21:09:36 - Total users: 0, Total licenses: 21
+2025-11-10 21:09:36 - Activation attempt - Key: 4VIY6-ZA6VK-HLF5B-N3AYA, Username: 12345
+2025-11-10 21:09:36 - Available users: 
+2025-11-10 21:09:36 - Activation failed: User not found - 12345
+2025-11-10 21:14:53 - Action: get_active, Input: null
+2025-11-10 21:14:53 - Total users: 5, Total licenses: 0
+2025-11-10 21:14:55 - Action: generate, Input: {"type":"1 Month","amount":1,"createdBy":"admin"}
+2025-11-10 21:14:55 - Total users: 5, Total licenses: 0
+2025-11-10 21:14:55 - Generated 1 keys of type: 1 Month
+2025-11-10 21:14:55 - Action: get_active, Input: null
+2025-11-10 21:14:55 - Total users: 5, Total licenses: 1
+2025-11-10 21:15:06 - Action: activate, Input: {"key":"DEXEY-UXBWT-347GA-PGROK","username":"12345"}
+2025-11-10 21:15:06 - Total users: 5, Total licenses: 1
+2025-11-10 21:15:06 - Activation attempt - Key: DEXEY-UXBWT-347GA-PGROK, Username: 12345
+2025-11-10 21:15:06 - Available users: admin, samixzxc, 12345
+2025-11-10 21:15:06 - Activation successful - User: 12345, Key: DEXEY-UXBWT-347GA-PGROK, Expiry: 10.12.2025
+2025-11-10 22:07:03 - Action: get_active, Input: null
+2025-11-10 22:07:03 - Total users: 10, Total licenses: 1
+2025-11-10 23:52:31 - Action: get_active, Input: null
+2025-11-10 23:52:31 - Total users: 10, Total licenses: 1
